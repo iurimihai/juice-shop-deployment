@@ -18,9 +18,12 @@ spec:
         app: juice-shop
     spec:
       containers:
-      - image: iurimihai/kaniko-test
+      - image: iurimihai/<CHANGE_ME>
         name: nginx
         resources:
+          limits:
+            cpu: "1"
+            memory: "512Mi"
 ---
 apiVersion: v1
 kind: Service
