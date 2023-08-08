@@ -18,7 +18,7 @@ spec:
         app: juice-shop
     spec:
       containers:
-      - image: iurimihai/kaniko-test:<CHANGE_ME>
+      - image: iurimihai/kaniko-test:9999
         name: nginx
         resources:
           limits:
