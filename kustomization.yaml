@@ -1,8 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
 namespace: juice-shop
-
 resources:
-  - app/juice-shop-ns.yaml
-  - app/juice-shop.yaml
+- app/juice-shop-ns.yaml
+- app/juice-shop.yaml
+images:
+- name: iurimihai/kaniko-test
+  newTag: 1.0.0
