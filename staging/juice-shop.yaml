@@ -18,7 +18,7 @@ spec:
         app: juice-shop
     spec:
       containers:
-      - image: iurimihai/kaniko-test:9999
+      - image: iurimihai/juice-shop-test:9999
         name: nginx
         resources:
           limits:
@@ -31,7 +31,7 @@ metadata:
   labels:
     app: juice-shop
   name: juice-shop-service
-  namespace: juice-shop
+  namespace: juice-shop-test
 spec:
   ports:
   - port: 3000

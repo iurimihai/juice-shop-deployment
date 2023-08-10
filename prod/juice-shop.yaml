@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: juice-shop
+  name: juice-deployment
+  namespace: juice-shop-prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: juice-shop
+  strategy: {}
+  template:
+    metadata:
+  
+      labels:
+        app: juice-shop
+    spec:
+      containers:
+      - image: iurimihai/juice-shop-prod:9999
+        name: nginx
+        resources:
+          limits:
+            cpu: "1"
+            memory: "512Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: juice-shop
+  name: juice-shop-service
+  namespace: juice-shop-prod
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: juice-shop
