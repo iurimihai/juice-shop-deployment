@@ -13,12 +13,12 @@ spec:
   strategy: {}
   template:
     metadata:
-  
       labels:
         app: juice-shop
     spec:
       containers:
       - image: iurimihai/juice-shop-prod:9999
+        imagePullPolicy: Always
         name: nginx
         resources:
           limits:
