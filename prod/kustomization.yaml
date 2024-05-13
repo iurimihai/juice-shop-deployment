@@ -4,6 +4,7 @@ namespace: juice-shop-prod
 resources:
 - juice-shop-ns.yaml
 - juice-shop.yaml
+- ingress.yaml
 images:
 - name: iurimihai/juice-shop-prod
   newTag: 1.0.0

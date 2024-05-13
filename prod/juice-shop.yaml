@@ -30,7 +30,7 @@ kind: Service
 metadata:
   labels:
     app: juice-shop
-  name: juice-shop-service
+  name: juice-shop
   namespace: juice-shop-prod
 spec:
   ports:

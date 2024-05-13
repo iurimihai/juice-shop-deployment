@@ -4,6 +4,7 @@ namespace: juice-shop-test
 resources:
 - juice-shop-ns.yaml
 - juice-shop.yaml
+- ingress.yaml
 images:
 - name: iurimihai/juice-shop-test
   newTag: 1.1.2
