@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: juice-shop-prod.iurimihai.dev
+  - host: jsh-prod.iurimihai.dev
     http:
       paths:
       - pathType: Prefix
