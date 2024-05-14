@@ -4,7 +4,6 @@ metadata:
   labels:
     app: juice-shop
   name: juice-deployment
-  namespace: juice-shop
 spec:
   replicas: 1
   selector:
@@ -31,7 +30,6 @@ metadata:
   labels:
     app: juice-shop
   name: juice-shop
-  namespace: juice-shop
 spec:
   ports:
   - port: 3000
