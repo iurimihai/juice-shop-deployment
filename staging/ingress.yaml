@@ -15,6 +15,7 @@ spec:
   tls:
   - hosts:
     - jsh-test.iurimihai.dev
+    secretName: jsh-test-tls
   rules:
   - host: jsh-test.iurimihai.dev
     http:
