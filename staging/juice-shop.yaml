@@ -37,3 +37,31 @@ spec:
     targetPort: 3000
   selector:
     app: juice-shop
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: juice-shop
+  labels:
+    name: juice-shop
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+    # nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-staging
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - jsh-test.iurimihai.dev
+  rules:
+  - host: jsh-test.iurimihai.dev
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: juice-shop
+            port: 
+              number: 3000
