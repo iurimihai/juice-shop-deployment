@@ -7,4 +7,4 @@ resources:
 - ingress.yaml
 images:
 - name: iurimihai/juice-shop
-  newTag: test-793e5f8b3bd59cdae8bf0b13be3ca2ce9593f301
+  newTag: test-15c9c579611a3660d0ed5e304736a4046db105ce
